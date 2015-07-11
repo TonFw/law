@@ -12,7 +12,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
+# See https://github.com/rails/execjs#readme for more supported run times
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
@@ -83,6 +83,31 @@ gem 'rufus-scheduler', '~> 3.1.3'
 
 # BROpenData --> Access to BR Gov OpenData WebServices
 gem 'br_open_data', '~> 0.0.2'
+
+# for the social-buttons
+gem 'jasny_bundle_fixed', '~> 1.0.0'
+
+# IconFonts - FontAwesome
+gem 'font-awesome-rails', '~> 4.2.0.0'
+
+# Rails google materialize (ATTENTION, MATERIAL 0.95.X NOT WORKING)
+gem 'materialize-sass', '0.96.1'
+
+# To create the time_line
+gem 'bourbon', '~> 4.2.3'
+
+# Admin bought Theme
+gem 'admin_materialize', '~> 0.1.0', git:'git@git.deskti.com:sistemas/admin_materialize.git'
+
+=begin
+ ######################    Production GEMs    #################################
+=end
+
+# Heroku pre compile
+gem 'rails_12factor', group: :production
+
+# Tracking production events
+gem 'newrelic_rpm'
 
 group :development, :test do
   # RSPec for BDD pratices

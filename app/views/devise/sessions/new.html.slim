@@ -1,0 +1,24 @@
+h2 Acesso ao Sistema
+
+.row.links
+  .col.s6.logo
+    h4: i.fa.fa-legal
+
+= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  .input-field
+    = f.email_field :email, autofocus: true
+    = f.label :email
+
+  .input-field
+    = f.password_field :password, autocomplete: 'off'
+    = f.label :password
+
+  -if devise_mapping.rememberable?
+    p
+      = f.check_box :remember_me, class:'filled-in'
+      = f.label :remember_me
+
+  .actions
+    = f.submit 'Log in'
+
+= render 'devise/shared/links'
