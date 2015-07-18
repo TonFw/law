@@ -15,11 +15,13 @@ html
   head
     title Acompanhamento de Projetos de Lei
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  body
+  body.overflow-hidden
     section#sign-in
       /! Background Canvas
       canvas#bubble-canvas
       /! Page Content
       = yield
+
+    footer#includejs
+      = javascript_include_tag 'application', 'data-turbolinks-track' => true

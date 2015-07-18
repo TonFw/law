@@ -97,7 +97,7 @@ gem 'materialize-sass', '0.96.1'
 gem 'bourbon', '~> 4.2.3'
 
 # Admin bought Theme
-gem 'admin_materialize', '~> 0.1.0', git:'git@git.deskti.com:sistemas/admin_materialize.git'
+gem 'admin_materialize', '~> 0.1.0', git:'http://git.deskti.com/sistemas/admin_materialize.git'
 
 =begin
  ######################    Production GEMs    #################################
