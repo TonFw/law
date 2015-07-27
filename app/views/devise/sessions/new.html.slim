@@ -1,24 +1,27 @@
-h2 Acesso ao Sistema
-
-.row.links
-  .col.s6.logo
-    h4: i.fa.fa-legal
-
 = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .input-field
-    = f.email_field :email, autofocus: true
-    = f.label :email
+  .row.links
+    .col.s8.logo
+      span.logo: i.fa.fa-legal
+      span &nbsp; Acompanhamento Parlamentar
+    .col.s4.right-align
+      a href="" Sign In
+      | &nbsp;/&nbsp;
+      a href="page-sign-up.html" Sign Up
+  .card-panel
+    .input-field
+      i class="fa fa-user prefix"
+      = f.email_field :email
+      = f.label :email
+    .input-field
+      i class="fa fa-unlock-alt prefix"
+      = f.password_field :password, autocomplete: 'off'
+      = f.label :password
 
-  .input-field
-    = f.password_field :password, autocomplete: 'off'
-    = f.label :password
+    -if devise_mapping.rememberable?
+      div class="switch"
+        label
+          = f.check_box :remember_me
+          span.lever
+          | Mantanhe-me conectado
 
-  -if devise_mapping.rememberable?
-    p
-      = f.check_box :remember_me, class:'filled-in'
-      = f.label :remember_me
-
-  .actions
-    = f.submit 'Log in'
-
-= render 'devise/shared/links'
+    button type="submit" class="waves-effect waves-light btn-large z-depth-0 z-depth-1-hover" Acessar

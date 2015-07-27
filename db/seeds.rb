@@ -7,6 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # ADMIN
 puts 'Inserting AdminUser...'.colorize(:green)
-admin = User.create(name:'System Admin', email:'aa@a.a', password:'123', password_confirmation:'123')
+admin = User.create(name:'System', last_name: 'Admin', email:'aa@a.a', password:'123', password_confirmation:'123')
 puts "\t #{admin}" if admin.errors.empty?
 puts '...AdminUser inserted.'.colorize(:light_blue)

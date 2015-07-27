@@ -1,5 +1,5 @@
 GIT
-  remote: git@git.deskti.com:sistemas/admin_materialize.git
+  remote: http://git.deskti.com/sistemas/admin_materialize.git
   revision: a107bfdd85f9be0648514c57f031d9643eb9a7ee
   specs:
     admin_materialize (0.1.0)
@@ -324,6 +324,3 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
-
-BUNDLED WITH
-   1.10.5
