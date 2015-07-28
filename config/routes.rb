@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # Chamber & Senate CRUDs
+  resources :propositions
+
   # DeviseUser sessions
   devise_for :users,
     controllers: {
@@ -6,7 +9,6 @@ Rails.application.routes.draw do
       registrations: 'users/registrations'
     }
 
-  devise_scope :user do
-    root to: 'users/sessions#new'
-  end
+  # Root to HomePage
+  root to: 'home#index'
 end

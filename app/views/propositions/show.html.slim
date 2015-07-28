@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @proposition.name
+p
+  strong Year:
+  = @proposition.year
+p
+  strong Number:
+  = @proposition.number
+p
+  strong Remote:
+  = @proposition.remote_id
+p
+  strong Presantation date:
+  = @proposition.presantation_date
+p
+  strong Purpose description:
+  = @proposition.purpose_description
+p
+  strong Purpose explanation:
+  = @proposition.purpose_explanation
+
+= link_to 'Edit', edit_proposition_path(@proposition)
+'|
+= link_to 'Back', propositions_path

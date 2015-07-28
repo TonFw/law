@@ -1,0 +1,33 @@
+h1 Listing propositions
+
+table
+  thead
+    tr
+      th Name
+      th Year
+      th Number
+      th Remote
+      th Presantation date
+      th Purpose description
+      th Purpose explanation
+      th
+      th
+      th
+
+  tbody
+    - @propositions.each do |proposition|
+      tr
+        td = proposition.name
+        td = proposition.year
+        td = proposition.number
+        td = proposition.remote_id
+        td = proposition.presantation_date
+        td = proposition.purpose_description
+        td = proposition.purpose_explanation
+        td = link_to 'Show', proposition
+        td = link_to 'Edit', edit_proposition_path(proposition)
+        td = link_to 'Destroy', proposition, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Proposition', new_proposition_path

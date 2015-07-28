@@ -1,0 +1,30 @@
+= form_for @proposition do |f|
+  - if @proposition.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@proposition.errors.count, "error")} prohibited this proposition from being saved:"
+      ul
+        - @proposition.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :year
+    = f.number_field :year
+  .field
+    = f.label :number
+    = f.number_field :number
+  .field
+    = f.label :remote_id
+    = f.number_field :remote_id
+  .field
+    = f.label :presantation_date
+    = f.text_field :presantation_date
+  .field
+    = f.label :purpose_description
+    = f.text_field :purpose_description
+  .field
+    = f.label :purpose_explanation
+    = f.text_field :purpose_explanation
+  .actions = f.submit
