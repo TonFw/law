@@ -99,6 +99,12 @@ gem 'bourbon', '~> 4.2.3'
 # Admin bought Theme
 gem 'admin_materialize', '~> 0.1.0', git:'http://git.deskti.com/sistemas/admin_materialize.git'
 
+# Authorization
+gem 'the_role', '~> 3.0.2'
+
+# Roles & Authorization GEM
+gem 'pundit', '~> 1.0.1'
+
 =begin
  ######################    Production GEMs    #################################
 =end

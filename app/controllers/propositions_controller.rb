@@ -1,4 +1,5 @@
 class PropositionsController < ApplicationController
+  before_action :login_required
   before_action :set_proposition, only: [:show, :edit, :update, :destroy]
 
   # GET /propositions

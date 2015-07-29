@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150728001152) do
+ActiveRecord::Schema.define(version: 20150728233859) do
 
   create_table "propositions", force: :cascade do |t|
     t.string   "name",                limit: 25,    null: false
@@ -23,6 +23,15 @@ ActiveRecord::Schema.define(version: 20150728001152) do
     t.text     "purpose_explanation", limit: 65535, null: false
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string   "name",        limit: 255,   null: false
+    t.string   "title",       limit: 255,   null: false
+    t.text     "description", limit: 65535, null: false
+    t.text     "the_role",    limit: 65535, null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -39,6 +48,7 @@ ActiveRecord::Schema.define(version: 20150728001152) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",     limit: 255
     t.string   "last_sign_in_ip",        limit: 255
+    t.integer  "role_id",                limit: 4
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
   end

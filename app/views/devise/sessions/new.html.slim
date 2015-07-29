@@ -9,6 +9,15 @@
       a href="page-sign-up.html" Cadastre-se
   .card-panel
     .row
+      -if alert
+        .alert.yellow.darken-3.white-text
+          strong Atenção!
+          =" #{alert}"
+      -elsif notice
+        .alert.blue.lighten-2.white-text
+          strong Informe:
+          =" #{notice}"
+    .row
       .input-field.col.s12.l12
         i class="fa fa-user prefix"
         = f.email_field :email
