@@ -1,0 +1,38 @@
+nav.navbar-top
+  .nav-wrapper
+    /!-- Sidebar toggle
+    a href="#" class="yay-toggle"
+      .burg1
+      .burg2
+      .burg3
+
+    /!-- Logo
+    a href="#!" class="brand-logo"
+      img src="assets/_con/images/logo.png" alt="Con"
+
+    /!-- Menu
+    ul
+      li: a href="#!" class="search-bar-toggle": i class="mdi-action-search"
+      li class="user"
+        a class="dropdown-button" href="#!" data-activates="user-dropdown"
+          =image_tag('defaults/profile.jpg', class:'circle', alt:'John Doe')
+          | John Doe
+          i class="mdi-navigation-expand-more right"
+        ul id="user-dropdown" class="dropdown-content"
+          li: a href="page-profile.html"
+            i class="fa fa-user"
+            | Profile
+          li
+            a href="mail-inbox.html"
+              i class="fa fa-envelope"
+              |Messages
+              span class="badge new" 2
+          li
+            a href="#!"
+              i class="fa fa-cogs"
+              | Settings
+          li class="divider"
+          li
+            a href="page-sign-in.html"
+              i class="fa fa-sign-out"
+              | Logout
